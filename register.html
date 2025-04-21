@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>茶和屋</title>
+    <link rel="icon" href="./images/綠樹葉 .png" type="image/png">
+    <link href="bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Serif+HK:wght@200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/animate.css">
+</head>
+<style>
+
+</style>
+</head>
+
+<body>
+    <header class="pt-3 mb-4" id="topBtn">
+        <div class="container d-flex align-items-center justify-content-between">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                aria-controls="mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-brand d-inline-flex align-items-center gap-1 text-decoration-none">
+                <a href="./teahouse.html"><img src="./images/LOGO.png" alt="logo"></a>
+                <a href="./teahouse.html" style="text-decoration: none;"><span class="fs-2 fw-bold" style="color: rgb(46, 34, 34);">茶和屋</span></a>
+            </div>
+            <ul class="nav d-none d-lg-flex">
+                <li><a href="./teahouse.html" class="nav-link px-2">品牌理念</a></li>
+                <li><a href="./teapot.html" class="nav-link px-2">壺藝茶韻</a></li>
+                <li><a href="./Q&A.html" class="nav-link px-2">問道答疑</a></li>
+                <li><a href="./contactus.html" class="nav-link px-2">聯絡我們</a></li>
+            </ul>
+
+            <div>
+                <div class="me-1 is-logout goTonext">歡迎回來 ! </div>
+                <a href="login.html" class="header-button login-button">登入</a>
+                <button class="header-button is-logout logout-button">登出</button>
+            </div>
+        </div>
+
+        <div class="btn-container">
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+                <div class="offcanvas-header">
+                    <h5 id="mobileMenuLabel">選單</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="nav flex-column">
+                        <li><a href="./teahouse.html" class="nav-link px-2">品牌理念 <img src="./images/茶碗.png"
+                            style="width: 50px;margin-bottom: 11px;"></a></li>
+                        <li><a href="./teapot.html" class="nav-link px-2">壺藝茶韻 <img src="./images/大樹葉.png"
+                            style="width: 50px;margin-bottom: 28px;"></a></li>
+                        <li><a href="./Q&A.html" class="nav-link px-2">問道答疑 <img src="./images/問號壺.png"
+                            style="width: 60px;margin-bottom: 23px;"></a></li>
+                        <li><a href="./contactus.html" class="nav-link px-2">聯絡我們 <img src="./images/信封.png"
+                            style="width: 60px;margin-bottom: 23px;"></a></li>
+                    </ul>
+                    <div style="color: #000000; font-size: smaller;padding-left:30px;">
+                        <p class="footerInfo">電話 : (04) 2326-5860</p>
+                        <p class="footerInfo">營業時間 : 週一至週五 10:00 - 20:00</p>
+                        <p class="footerInfo">地址 : 408 臺中市南屯區公益路二段51號</p>
+                    </div>
+                </div>
+
+            </div>
+    </header>
+
+    <br><br><br><br>
+    <br><br><br><br>
+
+    <div class="container mt-5" id="registerDiv">
+        <h2 class="text-center">註冊茶和屋</h2>
+
+        <div id="user-status" class="alert alert-info text-center d-none"></div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="registerForm">
+                    <div class="mb-3">
+                        <label for="registerEmail" class="form-label">電子郵件</label>
+                        <input type="email" class="form-control" id="registerEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerUsername" class="form-label">用戶名稱</label>
+                        <input type="text" class="form-control" id="registerUsername" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerPassword" class="form-label">密碼</label>
+                        <input type="password" class="form-control" id="registerPassword" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerConfirmPassword" class="form-label">確認密碼</label>
+                        <input type="password" class="form-control" id="registerConfirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn w-100" id="registerBtn">註冊</button>
+                </form>
+                <p class="text-center mt-3">已經有帳號了嗎？<a href="login.html" id="registerText">登入</a></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="fixedButton">
+        <div id="cart">
+            <img src="./images/購物袋.png">
+            <span id="cart-count">0</span>
+        </div>
+
+        <div>
+            <a href="#topTarget"><button id="goTopbtn">Top</button></a>
+        </div>
+    </div>
+    
+    <!-- 購物車區塊-->
+    <div id="cart-container" class="hidden">
+        <h3>購物車</h3>
+        <ul id="cart-content"><li>目前購物車是空的</li></ul>
+        <p id="cart-total-price">總金額：$ 0 元</p> 
+        <button id="checkout-button">結帳</button>
+        <button id="close-cart">關閉</button>
+    </div>
+
+
+    <br><br><br><br>
+    <br><br><br><br>
+    
+    
+    <footer>
+        <div style="color: #000000; font-size: smaller;">
+            <p class="footerInfo">電話 : (04) 2326-5860</p>
+            <p class="footerInfo">營業時間 : 週一至週五 10:00 - 20:00</p>
+            <p class="footerInfo">地址 : 408 臺中市南屯區公益路二段51號</p>
+            <p id="copyRight"> © 2025 by 茶和屋 / Design By Chentsangi</p>
+        </div>
+        <div class="socialIcon">
+            <a class="btn footerBtn" href="https://www.facebook.com"><img src="./images/facebook.png"></a>
+            <a class="btn footerBtn" href="https://www.instagram.com"><img src="./images/instagram.png"></a>
+            <a class="btn footerBtn" href="https://www.youtube.com"><img src="./images/youtube.png"></a>
+        </div>
+    </footer>
+
+    <script src="./js/user-display.js"></script>
+    <script src="login.js"></script>
+    <script src="./cart.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("user.php")
+                .then(response => response.json())
+                .then(data => {
+                    if (data.loggedIn) {
+                        document.querySelector(".goTonext").textContent = `歡迎回來, ${data.name || '訪客'}!`;
+                        document.querySelector(".logout-button").classList.remove("d-none");
+                        document.querySelector(".login-button").classList.add("d-none");
+                        document.querySelector(".register-button").classList.add("d-none");
+                    } else {
+                        document.querySelector(".goTonext").textContent = "請登入";
+                        document.querySelector(".logout-button").classList.add("d-none");
+                        document.querySelector(".login-button").classList.remove("d-none");
+                        document.querySelector(".register-button").classList.remove("d-none");
+                    }
+                });
+        });
+    </script> 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let topButton = document.getElementById("goTopbtn");
+        
+            if (!topButton) {
+                console.error("goTopbtn 按鈕未找到，請檢查 HTML");
+                return;
+            }
+        
+            topButton.addEventListener("click", function () {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        
+            console.log("goTopbtn 綁定成功");
+        });
+    </script>
+    <script src="./js/logout.js"></script>
+</body>
+<script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+<script>
+    document.getElementById("registerForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let email = document.getElementById("registerEmail").value;
+    let username = document.getElementById("registerUsername").value;
+    let password = document.getElementById("registerPassword").value;
+    let confirmPassword = document.getElementById("registerConfirmPassword").value;
+
+    if (password !== confirmPassword) {
+        alert("密碼與確認密碼不一致");
+        return;
+    }
+
+    fetch("register.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email, username, password })
+    })
+    .then(response => {
+        // 檢查是否為 JSON 回應
+        const contentType = response.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+            return response.text().then(text => {
+                throw new Error("伺服器回應格式錯誤：" + text);
+            });
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.success) {
+            alert("註冊成功！請登入");
+            window.location.href = "login.html";
+        } else {
+            alert("註冊失敗：" + data.message);
+        }
+    })
+    .catch(error => {
+        console.error("錯誤發生：", error);
+        alert("註冊過程中發生錯誤：" + error.message);
+    });
+});
+
+function checkLoginStatus() {
+    fetch("user.php?nocache=" + new Date().getTime()) 
+        .then(response => response.json())
+        .then(data => {
+            let goTonext = document.querySelector(".goTonext");
+            let loginBtn = document.querySelector(".login-button");
+            let registerBtn = document.querySelector(".register-button");
+            let logoutBtn = document.querySelector(".logout-button");
+
+            if (data.loggedIn) {
+                goTonext.textContent = `歡迎回來, ${data.name || '訪客'}!`;
+                logoutBtn.classList.remove("d-none"); 
+                loginBtn.classList.add("d-none");
+                registerBtn.classList.add("d-none");
+            } else {
+                goTonext.textContent = "請登入";
+                logoutBtn.classList.add("d-none"); 
+                loginBtn.classList.remove("d-none");
+                registerBtn.classList.remove("d-none");
+            }
+        })
+        .catch(error => console.error("登入狀態請求錯誤:", error));
+}
+
+// 頁面載入時執行
+document.addEventListener("DOMContentLoaded", checkLoginStatus);
+
+    // 購物袋
+
+    let cartBtns = document.querySelectorAll("#cartBtn");
+
+    let cartCount = document.querySelector("#cart span");
+
+    let cartQuantity = 0;
+
+    for (let i = 0; i < cartBtns.length; i++) {
+        cartBtns[i].addEventListener("click", function (event) {
+            event.preventDefault(); 
+
+            cartQuantity++;
+
+            cartCount.textContent = cartQuantity;
+        })
+    }
+
+    //小尺寸螢幕滾動問題
+    let navLinks = document.querySelectorAll(".nav-link");
+    let offcanvas = document.querySelector("#mobileMenu");
+    let offcanvasInstance = bootstrap.Offcanvas.getOrCreateInstance(offcanvas);
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            let targetId = this.getAttribute("href");
+
+            if (targetId && targetId.startsWith("#")) {
+                event.preventDefault(); 
+
+                let targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    let offset = 100; 
+                    let elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+
+
+                    offcanvasInstance.hide();
+
+
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: elementPosition - offset,
+                            behavior: "smooth"
+                        });
+                    }, 300);
+                }
+            }
+        });
+    });
+
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let email = document.getElementById("loginEmail").value;
+    let password = document.getElementById("loginPassword").value;
+
+    fetch("login.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email, password })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert("登入成功！");
+            window.location.href = "index.html"; // 登入成功導向首頁
+        } else {
+            alert("登入失敗：" + data.message);
+        }
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
+    let logoutBtn = document.querySelector(".logout-button");
+    
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", function () {
+            fetch("logout.php", {
+                method: "POST",
+                credentials: "include"
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("成功登出");
+                    window.location.href = "login.html"; // 跳轉回登入頁面
+                } else {
+                    alert("登出失敗：" + data.message);
+                }
+            })
+            .catch(error => console.error("登出錯誤:", error));
+        });
+    }
+});
+document.addEventListener("DOMContentLoaded", function () {
+    let topButton = document.getElementById("goTopbtn");
+
+    // 點擊按鈕回到最上方
+    topButton.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
+
+</script>
+
+</html>
